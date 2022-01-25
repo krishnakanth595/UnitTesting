@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+	<listeners>
+ 	   <listener class-name="utilities.TestListeners" />
+	</listeners> 
+
+	<test name="calculatortests" parallel = "tests" thread-count = "2">
+		<groups>  
+		<run>  
+		<exclude name="negative"/>  
+		</run>  
+		</groups>  
+		<classes>
+			<class name="CalculatorTests.SumLongTest"></class>
+		
+			<class name="CalculatorTests.SumDoubleTest"></class>
+		
+			<class name="CalculatorTests.SubLongTest"></class>
+		
+			<class name="CalculatorTests.SubDoubleTest"></class>
+		
+			<class name="CalculatorTests.DivTest"></class>
+		</classes>
+	</test> <!-- Test -->
+	<test name="TrignometricTest">
+		<classes>
+			<class name="TrignometricTests.CosTest"></class>
+		
+			<class name="TrignometricTests.SinTest"></class>
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
